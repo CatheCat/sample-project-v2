@@ -2,10 +2,6 @@
   <v-app>
     <app-navigation-drawer></app-navigation-drawer>
 
-    <v-app-bar>
-      <!-- ... -->
-    </v-app-bar>
-
     <v-main>
       <v-container fluid>
         <!-- ... -->
