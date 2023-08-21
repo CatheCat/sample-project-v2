@@ -37,7 +37,7 @@
         <v-list-item>
           <v-text-field class="p-5" label="Search" solo></v-text-field>
         </v-list-item>
-        <v-list-item  v-for="item in items1" :key="item.title" link>
+        <v-list-item  v-for="item in items1" :key="item.title" :to="item.to" link>
           <v-list-item-icon>
             <v-icon>{{ item.icon }}</v-icon>
           </v-list-item-icon>
@@ -77,12 +77,12 @@
       return {
         isOpen: !this.$vuetify.breakpoint.mobile,
         items1: [
-          { title: 'Home', icon: 'mdi-home' },
-          { title: 'Notification', icon: 'mdi-bell' },
-          { title: 'My subredits', icon: 'mdi-view-dashboard' },
-          { title: 'Gaming', icon: '' },
-          { title: 'Funny', icon: '' },
-          { title: 'Series', icon: '' }
+          { title: 'Home', to: '/', icon: 'mdi-home' },
+          { title: 'Notification', to: '/about', icon: 'mdi-bell' },
+          { title: 'My subredits', to: '', icon: 'mdi-view-dashboard' },
+          { title: 'Gaming', to: '', icon: '' },
+          { title: 'Funny', to: '', icon: '' },
+          { title: 'Series', to: '', icon: '' }
         ],
         items2: [
           {
