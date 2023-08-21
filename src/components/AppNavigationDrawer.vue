@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-app-bar :value="isMobile">
+    <v-app-bar v-show="isMobile">
       <v-app-bar-nav-icon @click="isOpen = !isOpen"></v-app-bar-nav-icon>
 
       <v-toolbar-title>
@@ -37,7 +37,7 @@
         <v-list-item>
           <v-text-field class="p-5" label="Search" solo></v-text-field>
         </v-list-item>
-        <v-list-item  v-for="item in items1" :key="item.title" :to="item.to" link>
+        <v-list-item  v-for="item in items1" :key="item.title" :to="item.to">
           <v-list-item-icon>
             <v-icon>{{ item.icon }}</v-icon>
           </v-list-item-icon>
