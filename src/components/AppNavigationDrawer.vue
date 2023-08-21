@@ -4,7 +4,7 @@
       <v-app-bar-nav-icon @click="isOpen = !isOpen"></v-app-bar-nav-icon>
 
       <v-toolbar-title>
-        <v-img src="../assets/ci-logo.png"></v-img>
+        <v-img src="../assets/image/app-logo.svg" max-width="160"></v-img>
       </v-toolbar-title>
 
       <v-spacer></v-spacer>
@@ -17,7 +17,7 @@
     <v-navigation-drawer app clipped v-model="isOpen">
       <v-list>
         <v-list-item>
-          <v-img src="../assets/ci-logo.png" max-width="112"></v-img>
+          <v-img src="../assets/image/app-logo.svg"></v-img>
         </v-list-item>
 
         <v-list-item link>
