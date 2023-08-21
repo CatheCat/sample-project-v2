@@ -3,9 +3,7 @@
     <app-navigation-drawer></app-navigation-drawer>
 
     <v-main>
-      <v-container fluid>
-        <router-view></router-view>
-      </v-container>
+      <router-view></router-view>
     </v-main>
 
     <v-footer>
@@ -15,7 +13,7 @@
 </template>
 
 <script>
-import AppNavigationDrawer from './components/AppNavigationDrawer.vue'
+import AppNavigationDrawer from '@/components/AppNavigationDrawer.vue'
 
 export default {
   components: {
