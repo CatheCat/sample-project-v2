@@ -51,14 +51,14 @@
       <v-divider></v-divider>
 
       <v-list dense nav>
-        <v-list-group v-for="item in items2" :key="item.title" v-model="item.active" :prepend-icon="item.action" no-action>
+        <v-list-group v-for="item in items2" :key="item.title" v-model="item.active" :prepend-icon="item.icon" no-action>
           <template v-slot:activator>
             <v-list-item-content>
               <v-list-item-title v-text="item.title"></v-list-item-title>
             </v-list-item-content>
           </template>
 
-          <v-list-item v-for="child in item.items" :key="child.title">
+          <v-list-item v-for="child in item.items" :key="child.title" :to="child.to">
             <v-list-item-content>
               <v-list-item-title v-text="child.title"></v-list-item-title>
             </v-list-item-content>
@@ -78,7 +78,7 @@
         isOpen: !this.$vuetify.breakpoint.mobile,
         items1: [
           { title: 'Home', to: '/', icon: 'mdi-home' },
-          { title: 'Notification', to: '/about', icon: 'mdi-bell' },
+          { title: 'Notification', to: '', icon: 'mdi-bell' },
           { title: 'My subredits', to: '', icon: 'mdi-view-dashboard' },
           { title: 'Gaming', to: '', icon: '' },
           { title: 'Funny', to: '', icon: '' },
@@ -86,27 +86,28 @@
         ],
         items2: [
           {
-            action: 'mdi-account-multiple',
+            title: 'About',
+            icon: 'mdi-account-multiple',
             active: true,
             items: [
-              { title: 'List Item1' },
-              { title: 'List Item2' }
-            ],
-            title: 'About',
+              { title: 'Register', to: '/about' },
+              { title: 'Profile', to: '' }
+            ]
           },
           {
-            action: 'mdi-help-box',
-            items: [
-              { title: 'List Item3' },
-            ],
             title: 'Help',
+            icon: 'mdi-help-box',
+            items: [
+              { title: 'General FAQ', to: '' },
+            ]
           },
           {
-            action: 'mdi-tools',
-            items: [
-              { title: 'List Item4' },
-            ],
             title: 'App & Tools',
+            icon: 'mdi-tools',
+            items: [
+              { title: 'About System', to: '' },
+              { title: 'Extension Plugin', to: '' }
+            ]
           }
         ]
       }
