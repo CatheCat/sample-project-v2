@@ -1,5 +1,5 @@
 <template>
-  <v-container>
+  <v-container fluid>
     <v-form ref="form" lazy-validation>
       <v-row>
         <v-col cols="12" md="6">
@@ -14,27 +14,23 @@
       </v-row>
       <v-row>
         <v-col cols="12" md="6">
-          <v-select v-model="age" :items="ageOption" item-value="key" item-text="value" label="Age" required></v-select>
+          <v-select v-model="age" :items="ageOption" item-value="key" item-title="value" label="Age" required></v-select>
         </v-col>
         <v-col cols="12" md="6">
-          <v-radio-group v-model="gender" row required>
+          <v-radio-group v-model="gender" inline required>
             <v-radio v-for="option in genderOptions" :key="option.key" :value="option.value" :label="option.value"></v-radio>
           </v-radio-group>
         </v-col>
-      </v-row>
-      <v-row>
         <v-col cols="12" md="6">
           <v-combobox v-model="skill" :items="skillOptions" label="Skill" multiple required></v-combobox>
         </v-col>
         <v-col cols="12" md="6">
-          <v-file-input v-model="file" label="File" truncate-length="15" required></v-file-input>
+          <v-file-input v-model="file" label="File" required></v-file-input>
         </v-col>
-      </v-row>
-      <v-row>
-        <v-col cols="12" md="12">
+        <v-col cols="12">
           <v-textarea v-model="introdution" label="Introduction" :rules="rules" required></v-textarea>
         </v-col>
-        <v-col cols="12" md="12">
+        <v-col cols="12">
           <v-slider v-model="treatment" label="Treatment" thumb-label="always" required></v-slider>
         </v-col>
       </v-row>
