@@ -1,4 +1,4 @@
-# sample-project-v2
+# sample-project-v2-upgrade-to-v3
 
 ## Project setup
 ```
@@ -10,15 +10,10 @@ npm install
 npm run serve
 ```
 
-### Compiles and minifies for production
-```
-npm run build
-```
+### Vue 2.0 upgrade Vue 3.0 Breaking Change
 
-### Lints and fixes files
-```
-npm run lint
-```
+[Document](https://hackmd.io/@GFSR1gcjRhCSF0ZklWzbxw/B1b_ZcZTn)
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### Vue 2.0 upgrade Vue 3.0 Migration Note
+
+[Document](https://hackmd.io/@GFSR1gcjRhCSF0ZklWzbxw/B1V9yeQ63)
